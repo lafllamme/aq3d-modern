@@ -15,8 +15,10 @@ export default defineNuxtConfig({
     preflight: true
   },
   nitro: {
+    preset: 'netlify',
     routeRules: {
       '/api/servers': { swr: 60 }
     }
-  }
+  },
+  ssr: false
 })
